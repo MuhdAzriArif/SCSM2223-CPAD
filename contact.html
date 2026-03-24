@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact</title>
+</head>
+<body>
+	<form action="#">
+        <fieldset style="width: 50%;">
+            <legend>Contact Me:</legend>
+            <label for="fullname">Your Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="100" style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"> <br>
+            <br><label for="Age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="100" placeholder="18-100" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"><br>
+            <br><label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="youremail@example.com" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"> <br>
+            <br><label for="telephone">Tel. Number: </label>
+            <input type="tel" id="telephone" name="telephone" placeholder="0123456789" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"> <br>
+            <br><label for="">Preferred Contact Date:</label>
+            <input type="date" id="datepref" name="datepref" style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"><br>
+            <br><label for="complexity">Complexity of inquiry</label><br>
+            <input type="range" id="complexity" name="complexity" min="1" max="10" style="padding: 5px;"><br>
+            <br><label for="subject">Subject:</label><br>
+            <select id="subject" name="subject" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;">
+                <option value="" disabled selected>Select a topic...</option>
+                <optgroup label="General">
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                </optgroup>
+                <optgroup label="Work/Business">
+                    <option value="freelance">Freelance Project</option>
+                    <option value="consultation">Consultation</option>
+                </optgroup>
+            </select><br>  
+            <br><p>Preferred Contact Medium:</p>
+            <input type="radio" id="contactpref1" name="contactpref" value="email">
+            <label for="contactpref1">Email</label><br>
+            <input type="radio" id="contactpref2" name="contactpref" value="phone">
+            <label for="contactpref2">Phone Call</label><br>
+            <input type="radio" id="contactpref3" name="contactpref" value="textmessage">
+            <label for="contactpref3">Text Message</label><br>
+            <br><p>Interest:</p>
+            <input type="checkbox" id="webdev" name="interest" value="webdev">
+            <label for="webdev">Web Development</label><br>
+            <input type="checkbox" id="app" name="interest" value="app">
+            <label for="webdev">Application</label><br>
+            <br><label for="message">Leave a message: </label><br>
+            <input type="textarea" id="message" name="message" style="width: 500px; height: 200px;"><br>
+            <br><input type="submit" style="border:2px solid gray; padding: 3px; font-size: 14px; color: white; background-color: dimgray;">
+        </fieldset>
+    </form>
+</body>
+</html>
