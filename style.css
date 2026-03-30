@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display');
+:root {
+    --color-primary: #9667e0;
+    --color-secondary: #ac88e8;
+    --color-first-accent: #c2a9ef;
+    --color-second-accent:#d8caf6;
+    --color-text: #1a1a1a;
+    --color-muted: #666666;
+    --color-surface: #f5f4f0;
+    --font-body: 'Open Sans';
+    --font-heading: 'Playfair Display';
+    --space-sm: 0.5rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+    --zero-value: 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: var(--zero-value);
+    padding: var(--zero-value);
+    font-size: 62.5%;
+}
+
