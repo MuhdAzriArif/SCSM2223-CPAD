@@ -7,22 +7,22 @@
 </head>
 <body>
 	<form action="#">
-        <fieldset style="width: 50%;">
+        <fieldset >
             <legend>Contact Me:</legend>
             <label for="fullname">Your Name</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="100" style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"> <br>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required maxlength="100"> <br>
             <br><label for="age">Age:</label>
-            <input type="number" id="age" name="age" min="18" max="100" placeholder="18-100" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"><br>
+            <input type="number" id="age" name="age" min="18" max="100" placeholder="18-100" required><br>
             <br><label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="youremail@example.com" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"> <br>
+            <input type="email" id="email" name="email" placeholder="youremail@example.com" required> <br>
             <br><label for="telephone">Tel. Number: </label>
-            <input type="tel" id="telephone" name="telephone" placeholder="0123456789" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"> <br>
+            <input type="tel" id="telephone" name="telephone" placeholder="0123456789" required> <br>
             <br><label for="datepref">Preferred Contact Date:</label>
-            <input type="date" id="datepref" name="datepref" style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;"><br>
+            <input type="date" id="datepref" name="datepref"><br>
             <br><label for="complexity">Complexity of inquiry</label><br>
-            <input type="range" id="complexity" name="complexity" min="1" max="10" style="padding: 5px;"><br>
+            <input type="range" id="complexity" name="complexity" min="1" max="10" ><br>
             <br><label for="subject">Subject:</label><br>
-            <select id="subject" name="subject" required style="border:2px solid black; padding: 3px; font-size: 14px; color: black; background-color: white;">
+            <select id="subject" name="subject" required>
                 <option value="" disabled selected>Select a topic...</option>
                 <optgroup label="General">
                     <option value="inquiry">General Inquiry</option>
@@ -46,8 +46,8 @@
             <input type="checkbox" id="app" name="interest" value="app">
             <label for="webdev">Application</label><br>
             <br><label for="message">Leave a message: </label><br>
-            <textarea id="message" name="message" style="width: 500px; height: 200px;"></textarea><br>
-            <br><input type="submit" style="border:2px solid gray; padding: 3px; font-size: 14px; color: white; background-color: dimgray;">
+            <textarea id="message" name="message" ></textarea><br>
+            <br><input type="submit" >
         </fieldset>
     </form>
 </body>
