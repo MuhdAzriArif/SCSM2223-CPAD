@@ -17,11 +17,18 @@
     --zero-value: 0;
 }
 
-* {
+html{
+    font-size: 62.5%;
+}
+
+*{
     box-sizing: border-box;
     margin: var(--zero-value);
     padding: var(--zero-value);
-    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font-body);
 }
 
 h1,h2,h3,h4 {
@@ -54,9 +61,7 @@ h4 {
     color: var(--color-secondary);
 }
 
-p,
-blockquote,
-code {
+p, blockquote, code {
     font-family: var(--font-body);
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -70,6 +75,10 @@ header {
     color: var(--color-primary);
     padding: var(--space-lg);
     /*padding: to create space between text inside header and the border of the header*/
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav {
@@ -77,6 +86,48 @@ nav {
     padding: var(--space-sm);
     color: var(--color-second-accent);
     /*padding: allow the navigation link inside nav to not touch the edge of nav bar*/
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 1.6rem;
+
+    
+
+
+}
+
+nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-md);
+        list-style: none;
+}
+
+nav a{
+    transition: color 0.2s, background-color 0.2s;
+}
+
+nav a.hover{
+    transition: color 0.2s, background-color 0.2s;
+}
+
+nav a.active{
+    border-bottom: var(--space-sm) solid var(--color-second-accent);
+}
+
+nav.secondary{
+    z-index: 50;
+    background-color: var(--color-secondary);
+}
+
+main{
+    background-color: var(--color-surface);
+    color: var(--color-secondary);
+    padding: var(--space-md);
 }
 
 footer {
@@ -86,13 +137,13 @@ footer {
     /*padding: a clearer looks for content inside footer using the gap inside footer*/
 }
 
-a:link { color: var(--color-first-accent); text-decoration: none; transition: 0.5s; }
+a:link { color: var(--color-first-accent); transition: 0.5s; }
 
 a:visited { color: var(--color-muted); }
 
 a:hover { color: var(--color-second-accent); text-decoration: underline; }
 
-a:active { color: var(--color-text); }
+a:active { color: var(--color-text);  }
 
 button, .card, .nav-link {
     border-radius: var(--space-sm); 
