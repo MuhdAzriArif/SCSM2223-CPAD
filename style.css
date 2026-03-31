@@ -94,10 +94,6 @@ nav {
     top: 0;
     z-index: 100;
     font-size: 1.6rem;
-
-    
-
-
 }
 
 nav ul{
@@ -111,7 +107,7 @@ nav a{
     transition: color 0.2s, background-color 0.2s;
 }
 
-nav a.hover{
+nav a:hover{
     transition: color 0.2s, background-color 0.2s;
 }
 
@@ -150,5 +146,27 @@ button, .card, .nav-link {
 }
 
 .card{
+    padding-right: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: var(--space-lg);
     box-shadow: 0 0 0 3px var(--color-first-accent);
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    transition: 0.2s;
+}
+
+.index-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-column: span 2;
+    gap: var(--space-md);
 }
