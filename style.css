@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono');
 
+
+/* ============================================ 
+BREAKPOINTS 
+mobile-first base: 320px and up (default) 
+tablet:   @media (min-width: 600px) 
+desktop:  @media (min-width: 1024px) 
+============================================ */ 
+
 :root {
     --color-primary: #8839ef;
     --color-secondary: #7287fd;
@@ -161,12 +169,6 @@ img {
     transition: 0.2s;
 }
 
-/* ============================================ 
-BREAKPOINTS 
-mobile-first base: 320px and up (default) 
-tablet:   @media (min-width: 600px) 
-desktop:  @media (min-width: 1024px) 
-============================================ */ 
 /* --- Base styles (mobile) --- */ 
 .index-container, .skills-container{
     display: grid;
@@ -177,6 +179,7 @@ desktop:  @media (min-width: 1024px)
 }
 
 
+/* Tablet Style */
 @media (min-width: 600px) { 
     .index-container{ 
         grid-template-columns: repeat(2, 1fr); 
@@ -190,6 +193,7 @@ desktop:  @media (min-width: 1024px)
     the columns become 2 and the header become flex row*/
 } 
 
+/* Desktop Style */
 @media (min-width: 1024px) { 
     .index-container{ 
         grid-template-columns: repeat(3, 1fr); 
