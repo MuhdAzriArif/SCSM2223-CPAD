@@ -1,25 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono');
+
 :root {
-    --color-primary: #9667e0;
-    --color-secondary: #ac88e8;
-    --color-first-accent: #c2a9ef;
-    --color-second-accent:#d8caf6;
-    --color-text: #1a1a1a;
-    --color-muted: #666666;
-    --color-surface: #f5f4f0;
+    --color-primary: #8839ef;
+    --color-secondary: #7287fd;
+    --color-first-accent: #1e66f5;
+    --color-second-accent: #ea76cb;
+    --color-text: #4c4f69;
+    --color-muted: #9ca0b0;
+    --color-surface: #eff1f5;
     --font-body: 'Open Sans';
-    --font-heading: 'Playfair Display';
+    --font-heading: 'Space Mono';
     --space-sm: 0.5rem;
     --space-md: 1.5rem;
     --space-lg: 3rem;
     --zero-value: 0;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: var(--zero-value);
     padding: var(--zero-value);
     font-size: 62.5%;
 }
 
+h1,h2,h3,h4 {
+    font-family: var(--font-heading);
+    margin: var(--space-md);
+    /*margin: used to add external spacing between headings and other content for clear level difference */
+}
+
+h1 {
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+    color: var(--color-primary);
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+    color: var(--color-secondary);
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: var(--color-text);
+}
+
+h4 {
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+    color: var(--color-secondary);
+}
+
+p,
+blockquote,
+code {
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+    /*margin: use to seperate different paragraph or text of block from each other*/
+}
+
+header {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: var(--space-lg);
+    /*padding: to create space between text inside header and the border of the header*/
+}
+
+nav {
+    background-color: var(--color-primary);
+    padding: var(--space-sm);
+    color: var(--color-second-accent);
+    /*padding: allow the navigation link inside nav to not touch the edge of nav bar*/
+}
+
+footer {
+    background-color: var(--color-surface);
+    color: var(--color-secondary);
+    padding: var(--space-md);
+    /*padding: a clearer looks for content inside footer using the gap inside footer*/
+}
+
+a:link { color: var(--color-first-accent); text-decoration: none; transition: 0.5s; }
+
+a:visited { color: var(--color-muted); }
+
+a:hover { color: var(--color-second-accent); text-decoration: underline; }
+
+a:active { color: var(--color-text); }
+
+button, .card, .nav-link {
+    border-radius: var(--space-sm); 
+}
+
+.card{
+    box-shadow: var(--color-muted);
+}
