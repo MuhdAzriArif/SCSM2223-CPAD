@@ -99,5 +99,5 @@ button, .card, .nav-link {
 }
 
 .card{
-    box-shadow: var(--color-muted);
+    box-shadow: 0 0 0 3px var(--color-first-accent);
 }
