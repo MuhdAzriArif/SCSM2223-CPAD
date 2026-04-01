@@ -160,6 +160,46 @@ img {
     height: auto;
 }
 
+input, textarea, select {
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    padding: var(--space-sm);
+    border-radius: var(--space-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    width: 30%;
+    margin-bottom: var(--space-sm);
+}
+
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 0 3px var(--color-second-accent);
+    border-color: var(--color-first-accent);
+}
+
+input[type="radio"],input[type="checkbox"]{
+    width: 10%;
+}
+
+button, input[type="submit"] {
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--space-sm);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--color-secondary);
+}
+
+button:active, input[type="submit"]:active {
+    transform: scale(0.97);
+}
+
 .card{
     box-shadow: 0 0 0 3px var(--color-first-accent);
 }
