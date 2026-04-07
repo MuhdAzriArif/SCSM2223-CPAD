@@ -57,6 +57,17 @@ h2 {
     color: var(--color-secondary);
 }
 
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 3.2rem;
+    background-color: var(--color-first-accent);
+    margin-right: var(--space-md);
+    vertical-align: middle;
+    border-radius: var(--space-sm);
+}
+
 h3 {
     font-size: 2.4rem;
     line-height: 3.6rem;
@@ -151,13 +162,17 @@ a:hover { color: var(--color-second-accent); text-decoration: underline; }
 
 a:active { color: var(--color-text);  }
 
-button, .card, .nav-link {
+button, .card, .nav-link .card-span-2{
     border-radius: var(--space-sm); 
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+fieldset{
+    max-width: 50%;
 }
 
 input, textarea, select {
@@ -167,7 +182,10 @@ input, textarea, select {
     border-radius: var(--space-sm);
     background-color: var(--color-surface);
     color: var(--color-text);
-    width: 30%;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: var(--space-sm);
     margin-bottom: var(--space-sm);
 }
 
@@ -204,9 +222,69 @@ button:active, input[type="submit"]:active {
     box-shadow: 0 0 0 3px var(--color-first-accent);
 }
 
-.card:hover{
+.card-span-2{
+    box-shadow: 0 0 0 3px var(--color-first-accent);
+    grid-column: span 2;
+}
+
+.card:hover, .card-span-2:hover{
     transform: translateY(-4px);
     transition: 0.2s;
+}
+
+blockquote::before ,blockquote::after{
+    content: '"';
+    font-size: 4rem;
+    color: var(--color-second-accent);
+    line-height: 0;
+    vertical-align: middle;
+    margin-right: var(--space-sm);
+}
+
+blockquote{
+    margin-left: var(--space-lg);
+}
+
+tbody tr:nth-child(even) td, 
+tbody tr:nth-child(even) th {
+    background-color: var(--color-first-accent);
+    color: var(--color-surface); 
+}
+
+tbody tr:nth-child(odd) td, 
+tbody tr:nth-child(odd) th {
+    background-color: var(--color-second-accent);
+    color: var(--color-surface);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: var(--space-md) 0;
+    font-family: var(--font-body);
+}
+
+td, th {
+    padding: var(--space-sm);
+    border: 1px solid var(--color-muted);
+    font-size: 1.6rem;
+}
+
+ol li{
+    border: 1px solid var(--color-muted);
+    padding: var(--space-sm) 0;
+    list-style: none;
+    text-align: center;
+    font-size: 1.6rem;
+    width: 10%;
+}
+
+ol li:first-child {
+    border-top: none;
+}
+
+ol li:last-child{
+    border-bottom: none;
 }
 
 /* --- Base styles (mobile) --- */ 
@@ -240,8 +318,7 @@ button:active, input[type="submit"]:active {
     }
     .skills-container{ 
         display: grid;
-        grid-template-columns: 1fr 280px;  /*sidebar layout as asked*/
-        grid-column: span 2;
+        grid-template-columns: repeat(3, 1fr);  /*sidebar layout as asked*/
     } 
 
     nav ul{
